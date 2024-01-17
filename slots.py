@@ -1,11 +1,8 @@
 import random
 from collections import Counter
 
-def generate_random_combination(emotes, length):
-   return random.choices(emotes, k=length)
-
 emotes = ['a', 'b', 'c', 'd', 'e', 'f','g','h','i','j']
-result = generate_random_combination(emotes, 3)
+result = random.choices(emotes, k=3)
 amount = int(input('Place your bet: '))
 counter = Counter(result)
 
