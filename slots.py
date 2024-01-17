@@ -1,25 +1,31 @@
 import random
-import itertools
 from collections import Counter
-high_tier = ['a','b']
-low_tier= ['c','d','e','f','g','h','i','j']
+
+def generate_random_combination(emotes, length):
+   return random.choices(emotes, k=length)
+
 emotes = ['a', 'b', 'c', 'd', 'e', 'f','g','h','i','j']
-combinations = list(itertools.product(emotes, repeat=3))
-result = random.choice(combinations)  
+result = generate_random_combination(emotes, 3)
 amount = int(input('Place your bet: '))
 counter = Counter(result)
+
+high_tier = {'a','b'}
+low_tier= {'c','d','e','f','g','h','i','j'}
+
 if len(set(result)) == len(result):
    amount *= 0
-for emote, count in counter.items():
-    if emote in high_tier:
-        if count == 2:
-            amount *= 25
-        elif count == 3:
-            amount *= 50
-    else:
-        if count == 2:
-            amount *= 1.5
-        elif count == 3:
-            amount *= 2.5
-print("After spinning the wheel you've got: ",dict(counter))
+for idx, (emote, count) in enumerate(counter.items()):
+   if emote in high_tier:
+       if count == 2:
+           amount *= 25
+       elif count == 3:
+           amount *= 50
+   else:
+       if count == 2:
+           amount *= 1.50
+       elif count == 3:
+           amount *= 2.5
+
+print("After spinning the wheel you've got: ", dict(counter))
 print('Amount after betting: ', amount)
+
