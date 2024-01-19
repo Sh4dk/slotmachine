@@ -1,5 +1,5 @@
 <h2>Description</h2>
-  This program is a slotmachine
+  This program is a slotmachine,
   you enter the amount you want to bet,
   and you either win or lose. 
 <h2>Reward system</h2>
@@ -13,7 +13,7 @@
   your bet is multiplied by 25
   3 repeating emotes from HIGH tier emotes,
   your bet is multiplied by 50
-  else you'd lose the amount you bet  
+  else you'd lose the amount you bet  .
 <h2>Requirements</h2>
   Python 3
   random library
