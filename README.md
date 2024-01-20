@@ -15,6 +15,6 @@
   your bet is multiplied by 50<br>
   else you'd lose the amount you bet.<br>
 <h2>Requirements</h2>
-  Python 3
-  random library
-  collections library
+  Python 3<br>
+  random library<br>
+  collections library<br>
